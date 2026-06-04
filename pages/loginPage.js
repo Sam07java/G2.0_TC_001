@@ -2,8 +2,8 @@ exports.loginPage = class loginPage {
     constructor(page){
         this.page = page;
         this.instituteLoginElementButton = 'Institute Login'
-        this.EmailTextFieldElement = 'input[name="email"]'
-        this.PasswordFieldElement = 'input[name="password"]'
+        this.EmailTextFieldElement = '#institute-login-email'
+        this.PasswordFieldElement = '#institute-login-password'
         this.SignInButtonElement = 'button[type="submit"]'
         this.profilButtonElement = 'Toggle profile dropdown'
         this.signoutButton = 'Sign out'
@@ -16,6 +16,7 @@ exports.loginPage = class loginPage {
 
     async enter_Login_Data(email,password){
        await this.page.locator(this.EmailTextFieldElement).fill(email)
+       await this.page.keyboard.press('Tab')
        await this.page.locator(this.PasswordFieldElement).fill(password)
        await this.page.locator(this.SignInButtonElement).click()
     }
@@ -27,5 +28,4 @@ exports.loginPage = class loginPage {
     }
 
     
-
 }

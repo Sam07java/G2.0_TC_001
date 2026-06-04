@@ -1,7 +1,19 @@
 {
     "login_Data": {
-         "teacherUserName" : "",
+         "teacherUserName" : "sameer@yopmasil.com",
          "teacherPassword" : ""
+
+    },
+
+    "student_Data": {
+         "studentUserName" : "",
+         "studentPassword" : ""
+
+    },
+    
+    "parent_Data": {
+         "parentUserName" : "",
+         "parentPassword" : ""
 
     }
 }

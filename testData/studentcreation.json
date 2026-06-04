@@ -1,0 +1,19 @@
+{
+    "studentData": {
+        "firstName": "Emily",
+        "lastName": "Doe",
+        "dateOfBirth": "2005-05-15",
+
+        "CurrentClass": "Class 9",
+        "Section": "A",
+        "AdmissionNumber": "ADM12345",
+
+        "fatherName": "John Doe",
+        "fatherContactNumber": "1234567890",
+        "motherName": "Jane Doe",
+        "motherContactNumber": "0987654321",
+        "city": "New York",
+        "state": "NY"
+        
+    }
+}
