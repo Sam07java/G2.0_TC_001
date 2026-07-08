@@ -5,7 +5,7 @@ exports.institutedashboardpage = class institutedashboardpage {
         this.Student_Management_element = 'Student Management'
         this.AdmissionElement = 'Admission'
         this.Faculty_Management_Element = 'Faculty Management'
-        this.Teacher_Directory_Element = 'Teacher Directory'
+        this.Teacher_Directory_Element = 'Staff directory'
     }
 
     async navigateTostudent_RegistrationPage(){
@@ -17,7 +17,4 @@ exports.institutedashboardpage = class institutedashboardpage {
         await this.page.getByText(this.Faculty_Management_Element).click()
         await this.page.getByText(this.Teacher_Directory_Element).click()
     }
-
-
-
 }

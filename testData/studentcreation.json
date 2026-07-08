@@ -15,5 +15,14 @@
         "city": "New York",
         "state": "NY"
         
+    },
+
+    "teacherData": {
+        "firstName": "Michael",
+        "lastName": "Smith",
+        "dateOfBirth": "1980-03-20",
+
+        "subjectSpecialization": "Mathematics",
+        "employeeId": "EMP67890"
     }
 }

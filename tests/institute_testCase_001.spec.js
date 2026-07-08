@@ -59,7 +59,7 @@ test.skip("Create new student profile through institute portal", async({page})=>
 
       
       // Second page of student registration form - Academic details page.
-      await studentRegistrationPage.select_class('Class 9')
+      await studentRegistrationPage.select_class(studentcreationData.studentData.CurrentClass)
       await studentRegistrationPage.select_section('B')
 
       await studentRegistrationPage.click_on_sameAsAbove_Checkbox()
@@ -106,6 +106,8 @@ test("Create new teacher profile through institute portal", async({page})=>{
       // await teacherCreationPage.enter_the_BranchName('QWW')
             await teachercreationpage.click_on_Add_Button()
 
+            await teachercreationpage.click_on_Add_TeachingStaff_Button()
+
             await teachercreationpage.upload_Profile_Picture('C:/Users/WIIS/gyanset_2.0_TC_1.0/image/pic1.jpg')
         
             await teachercreationpage.enter_FullName('Auto PP')
@@ -113,15 +115,19 @@ test("Create new teacher profile through institute portal", async({page})=>{
             await teachercreationpage.enter_Email('auto.pp@example.com')
             await teachercreationpage.enter_Phone('1234567890')
 
+            await teachercreationpage.selectGender('Male')
+
             await teachercreationpage.click_on_Next_Button()
             await teachercreationpage.click_on_Next_Button()
 
-            await teachercreationpage.selectClass(page, 'Class 9', 'B')
+            await teachercreationpage.selectClass(page, 'Class 9', 'Section B', 'Malayalam')
 
+            await teachercreationpage.click_on_Next_Button()
+            await teachercreationpage.click_on_Next_Button()
 
-
-       await page.pause()
-       
+            await teachercreationpage.click_on_Add_Teacher_Button()
+            
+            await page.pause()
 
 })
 
