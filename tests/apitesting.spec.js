@@ -28,8 +28,8 @@ const response = await request.get(apiURL+'students?page=1&limit=10',
 })
 
 test('Create a new student', async({request})=>{
- const createtudentResponse = await request.post(apiURL+'students',
-    {headers:{Authorization: `Bearer ${admintoken}`},
+ const createtudentResponse = await request.post(apiURL+'students',{
+  headers:{Authorization: `Bearer ${admintoken}`},
     multipart:{
       "fullName": "Auto CC",
       "admissionNo": "AD998890",

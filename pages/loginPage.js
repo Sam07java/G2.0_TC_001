@@ -1,3 +1,4 @@
+const { expect } = require('@playwright/test');
 exports.loginPage = class loginPage {
     constructor(page){
         this.page = page;
@@ -7,7 +8,7 @@ exports.loginPage = class loginPage {
         this.SignInButtonElement = 'button[type="submit"]'
         this.profilButtonElement = 'Toggle profile dropdown'
         this.signoutButton = 'Sign out'
-
+        this.loginSuccessElement = 'Analytics Dashboard'
     }
 
     async click_on_institute_Button(){
@@ -27,5 +28,9 @@ exports.loginPage = class loginPage {
         await this.page.getByText(this.signoutButton).click()
     }
 
+    async verify_Login_Success(){
+        const profileButtonVisible = await this.page.locator('h1', { hasText: this.loginSuccessElement });
+        await expect(profileButtonVisible).toBeVisible();
+    }
     
 }
