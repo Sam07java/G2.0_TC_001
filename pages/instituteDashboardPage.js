@@ -6,9 +6,12 @@ exports.institutedashboardpage = class institutedashboardpage {
         this.AdmissionElement = 'Admission'
         this.Faculty_Management_Element = 'Faculty Management'
         this.Teacher_Directory_Element = 'Staff directory'
+        this.student_registration_element = 'Registration'
+        this.Class_Management_Element = 'Class Management'
+        this.administror_Management_Element = 'Administration'
     }
 
-    async navigateTostudent_RegistrationPage(){
+    async navigateTostudent_RegistrationPageAdmission(){
         await this.page.getByText(this.Student_Management_element).click()
         await this.page.getByText(this.AdmissionElement).first().click()
     }
@@ -16,5 +19,15 @@ exports.institutedashboardpage = class institutedashboardpage {
     async navigateToTeacher_CreationPage(){
         await this.page.getByText(this.Faculty_Management_Element).click()
         await this.page.getByText(this.Teacher_Directory_Element).click()
+    }
+
+    async navigateTostudent_RegistrationPage(){
+        await this.page.getByText(this.Student_Management_element).click()
+        await this.page.getByText(this.student_registration_element).click()
+    }
+
+    async navigateToClass_ManagementPage(){
+        await this.page.getByText(this.administror_Management_Element).click()
+        await this.page.getByText(this.Class_Management_Element).click()
     }
 }

@@ -1,12 +1,12 @@
 {
     "studentData": {
-        "firstName": "Emily",
-        "lastName": "Doe",
-        "dateOfBirth": "2005-05-15",
+        "firstName": "Saamu",
+        "lastName": "Do",
+        "dateOfBirth": "2010-05-15",
 
         "CurrentClass": "Class 9",
         "Section": "A",
-        "AdmissionNumber": "ADM12345",
+        "AdmissionNumber": "ADEM12345",
 
         "fatherName": "John Doe",
         "fatherContactNumber": "1234567890",

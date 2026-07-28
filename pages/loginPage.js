@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+import ScreenshotHelper from '../utility/screenshotHelper';
 exports.loginPage = class loginPage {
     constructor(page){
         this.page = page;
@@ -9,6 +10,7 @@ exports.loginPage = class loginPage {
         this.profilButtonElement = 'Toggle profile dropdown'
         this.signoutButton = 'Sign out'
         this.loginSuccessElement = 'Analytics Dashboard'
+        this.errormessageElement = '.error-message'
     }
 
     async click_on_institute_Button(){
@@ -29,8 +31,15 @@ exports.loginPage = class loginPage {
     }
 
     async verify_Login_Success(){
-        const profileButtonVisible = await this.page.locator('h1', { hasText: this.loginSuccessElement });
-        await expect(profileButtonVisible).toBeVisible();
+             const successmessage =this.page.locator('h1', { hasText: this.loginSuccessElement })
+        try {
+            await expect(successmessage).toBeVisible();
+            console.log("Login successful!");
+        } catch (error) {
+            await ScreenshotHelper.capture(this.page, 'Login_Failed');
+            const errorMessage = await this.page.locator(this.errormessageElement).textContent();
+            throw new Error(`Login failed! ${errorMessage}`);
+        }
     }
     
 }
