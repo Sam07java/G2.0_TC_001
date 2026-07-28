@@ -1,0 +1,13 @@
+{
+    "RegistrationData" : {
+        "student_full_name" : "ASs",
+        "student_registration_date" : "12/07/2026",
+        "student_registration_class" : "Class 10",
+        "FatherName" : "John Doe",
+        "FatherContactNumber" : "1234567890",
+        "MotherName" : "Jane Doe",
+        "MotherContactNumber" : "0987654321"
+
+    }
+
+}
