@@ -1,19 +1,20 @@
 {
     "login_Data": {
-         "teacherUserName" : "sameer@yopmasil.com",
-         "teacherPassword" : ""
+         
+         "teacherUserName" : "arathishivpr123@yopmail.com",
+         "teacherPassword" : "password123"
 
     },
 
     "student_Data": {
-         "studentUserName" : "",
-         "studentPassword" : ""
+         "studentUserName" : "s12@sc001.gyansetu.ai",
+         "studentPassword" : "password123"
 
     },
     
     "parent_Data": {
-         "parentUserName" : "",
-         "parentPassword" : ""
+         "parentUserName" : "p12@sc001.gyansetu.ai",
+         "parentPassword" : "password123"
 
     }
 }
