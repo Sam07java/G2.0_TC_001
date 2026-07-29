@@ -1,9 +1,8 @@
 import {test, expect} from '@playwright/test'
 import { landingPage } from '../../pages/landingPage'
 require('dotenv').config();
-import { loginPage } from '../../pages/loginPage';
+import  LoginPage  from '../../pages/loginPage';
 import { institutedashboardpage } from '../../pages/instituteDashboardPage';
-import { studeregistrationPage } from '../pages/studentRegistrationPage';
 import studentcreationData from '../../testData/studentcreation.json'
 const { TeacherCreationPage } = require('../../pages/teacher_creation_page');
 
@@ -11,16 +10,11 @@ const { TeacherCreationPage } = require('../../pages/teacher_creation_page');
 test.beforeEach('Institute login', async ({page})=>{
 
    const institutepage = new landingPage(page)
-
-   const loginpage = new loginPage(page)
-
+   const loginpage = new LoginPage(page)
    await institutepage.gettheURL()
    //    await institutepage.click_on_start_Buttton()
-
    await loginpage.click_on_institute_Button()
-
    await page.waitForTimeout(2000)
-
    await loginpage.enter_Login_Data(process.env.INSTITUTE_ADMIN_EMAIL, process.env.INSTITUTE_ADMIN_PASSWORD)
    // await page.pause()
 

@@ -1,6 +1,6 @@
 const { expect } = require('@playwright/test');
 import ScreenshotHelper from '../utility/screenshotHelper';
-//exports.loginPage = class loginPage 
+// exports.LoginPage = class LoginPage 
 export default class LoginPage
 {
     constructor(page){

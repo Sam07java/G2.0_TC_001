@@ -13,6 +13,7 @@ test.describe('Syllabus management', () => {
               await loginpage.enterInstitutePassword(process.env.INSTITUTE_ADMIN_PASSWORD);
               await loginpage.schoolLoginbutton();
           });
+          
     test('Should create subjects for classes', async ({ page }) => {
            const subjectpage = new subjectcreation(page); 
            await subjectpage.navigatetoadminstration();

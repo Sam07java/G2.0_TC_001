@@ -1,12 +1,12 @@
 import {test, expect} from '@playwright/test'
 import { landingPage } from '../../pages/landingPage'
 require('dotenv').config();
-import { loginPage } from '../../pages/loginPage';
+import  LoginPage  from '../../pages/loginPage.js';
 
 test('Verify login functionality for institute admin', async({page})=>{
    
     const institutepage = new landingPage(page)
-    const loginpage = new loginPage(page)
+    const loginpage = new LoginPage(page)
 
     await institutepage.gettheURL()
     await loginpage.click_on_institute_Button()

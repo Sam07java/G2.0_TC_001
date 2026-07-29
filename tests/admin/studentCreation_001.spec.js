@@ -1,19 +1,16 @@
 import {test, expect} from '@playwright/test'
 import { landingPage } from '../../pages/landingPage.js'
 require('dotenv').config();
-import { loginPage } from '../../pages/loginPage.js';
+import  LoginPage  from '../../pages/loginPage.js';
 import { institutedashboardpage } from '../../pages/instituteDashboardPage.js';
 import { studeregistrationPageAdmission } from '../../pages/studentRegistrationPageAdmission.js';
 import studentcreationData from '../../testData/studentcreation.json'
 const { TeacherCreationPage } = require('../../pages/teacher_creation_page.js');
 
-
-
-
 test.beforeEach('Institute login', async ({page})=>{
 
    const institutepage = new landingPage(page)
-   const loginpage = new loginPage(page)
+   const loginpage = new LoginPage(page)
    await institutepage.gettheURL()
    await loginpage.click_on_institute_Button()
    await page.waitForTimeout(2000)

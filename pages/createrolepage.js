@@ -11,31 +11,33 @@ export default class adcreateRolePage {
         this.createsubadmin=`button:has-text("Create Sub-Admin")`;
         this.subadminpassword1='Their password';
 }
-async navigatetocreaterolemenu() {
-    await this.page.getByText(this.createrolemenu).click();
-}
-async navigatetocreatesubadminoption() {
-    await this.page.getByText(this.createsubadminoption).first().click();       
-}
-async navigatetosearchoption() {
-    await this.page.getByLabel(this.searchoption).click();
-    await this.page.getByLabel(this.searchoption).fill('Arathi Shiva Prasad');
-    await this.page
-        .getByText('Arathi Shiva Prasad', { exact: false })
-        .first()
-        .waitFor();
-    await this.page
-        .getByText('Arathi Shiva Prasad', { exact: false })
-        .first()
-        .click();
-
-}
 
 async selectPrivileges(data) {
     for (const privilege of data.privileges) {
         await this.privilegeCheckbox(privilege).check();
     }
 }
+
+async navigatetocreaterolemenu() {
+    await this.page.getByText(this.createrolemenu).click();
+}
+async navigatetocreatesubadminoption() {
+    await this.page.getByText(this.createsubadminoption).first().click();       
+}
+async navigatetosearchoption(rolename) {
+    await this.page.getByLabel(this.searchoption).click();
+    await this.page.getByLabel(this.searchoption).fill(rolename);
+    await this.page
+        .getByText(rolename, { exact: false })
+        .first()
+        .waitFor();
+    await this.page
+        .getByText(rolename, { exact: false })
+        .first()
+        .click();
+
+}
+
 async subadminpassword(){
     await this.page.getByPlaceholder(this.subadminpassword1).fill('password123')
 }

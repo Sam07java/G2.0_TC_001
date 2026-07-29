@@ -15,11 +15,12 @@ test.describe('Create Role Tests', () => {
         await loginpage.enterInstitutePassword(process.env.INSTITUTE_ADMIN_PASSWORD);
         await loginpage.schoolLoginbutton();
     });
+
     test('should create a role successfully', async ({ page }) => {
         const createRole = new createrolepage(page);  
         await createRole.navigatetocreaterolemenu();
         await createRole.navigatetocreatesubadminoption();
-        await createRole.navigatetosearchoption();
+        await createRole.navigatetosearchoption('Arathi Shiva Prasad');
         await createRole.subadminpassword();
         await createRole.selectPrivileges(createprivilege);
         await page.waitForTimeout(2000);
