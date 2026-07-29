@@ -1,0 +1,10 @@
+{
+  "privileges": 
+  [
+    "School Dashboard",
+    "Academic session",
+    "Class Management",
+    "Student Attendance",
+    "Manage Student"
+  ]
+}
