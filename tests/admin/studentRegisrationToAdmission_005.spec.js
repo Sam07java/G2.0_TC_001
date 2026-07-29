@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test'
 import { landingPage } from '../../pages/landingPage.js'
 require('dotenv').config();
-import studentcreationData from '../../testData/studentcreationData.json'
+import studentcreationData from '../../testData/studentRegistrationData.json'
 import { loginPage } from '../../pages/loginPage.js';
 import { institutedashboardpage } from '../../pages/instituteDashboardPage.js'; 
 const { studeregistrationPage } = require('../../pages/studentRegistration.js');
