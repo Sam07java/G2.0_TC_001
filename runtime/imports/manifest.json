@@ -1,14 +1,26 @@
 {
-  "runId": "20260730152447",
-  "generatedAt": "2026-07-30T15:24:48.275Z",
+  "runId": "20260731101051",
+  "generatedAt": "2026-07-31T10:10:52.355Z",
   "dpeStatus": "READY",
   "dpeTotals": {
-    "raw": 50,
-    "ready": 50,
+    "raw": 119,
+    "ready": 119,
     "rejected": 0,
     "duplicates": 0
   },
   "files": [
+    {
+      "module": "classes",
+      "file": "Classes.csv",
+      "rows": 16,
+      "runtimePath": "runtime\\imports\\Classes.csv"
+    },
+    {
+      "module": "faculty",
+      "file": "Faculty.csv",
+      "rows": 53,
+      "runtimePath": "runtime\\imports\\Faculty.csv"
+    },
     {
       "module": "students",
       "file": "Students.csv",
@@ -17,10 +29,8 @@
     }
   ],
   "noDataModules": [
-    "classes",
     "vehicles",
     "routes",
-    "fees",
-    "faculty"
+    "fees"
   ]
 }

@@ -1,0 +1,92 @@
+{
+  "runId": "20260731092342",
+  "engine": "GyanSetu DPE Phase 1 v5.2 No-Driver / No-Staff-Category Mode",
+  "startedAt": "2026-07-31T09:23:42.950Z",
+  "status": "FAILED",
+  "sources": [
+    {
+      "file": "students_full_export_2026-07-30.csv",
+      "sheet": "Sheet1",
+      "module": null,
+      "rows": 14
+    }
+  ],
+  "unclassified": [
+    "students_full_export_2026-07-30.csv :: Sheet1"
+  ],
+  "modules": [
+    {
+      "id": "classes",
+      "name": "Classes and Sections",
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": []
+    },
+    {
+      "id": "vehicles",
+      "name": "Vehicles",
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": []
+    },
+    {
+      "id": "routes",
+      "name": "Transport Routes",
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": []
+    },
+    {
+      "id": "fees",
+      "name": "Fee Types",
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": []
+    },
+    {
+      "id": "faculty",
+      "name": "Faculty",
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": []
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": []
+    }
+  ],
+  "totals": {
+    "raw": 0,
+    "ready": 0,
+    "rejected": 0,
+    "duplicates": 0
+  },
+  "finishedAt": "2026-07-31T09:23:42.955Z"
+}

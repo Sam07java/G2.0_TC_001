@@ -2,16 +2,30 @@
   "name": "gyanset_2.0_tc_1.0",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "prepare": "node src/dpe.js",
+    "import": "node src/importer.js",
+    "adse": "node src/orchestrator.js",
+    "validate": "node src/orchestrator.js --validate-only",
+    "stage": "node src/stage-imports.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:login": "playwright test tests/admin/login.spec.js",
+    "test:workflow": "playwright test tests/imports/workflow.spec.js",
+    "ci": "npm run test:workflow && playwright test tests/smoke/project.spec.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.62.0",
+    "@playwright/test": "^1.62.1",
     "@types/node": "^24.9.1"
   },
   "dependencies": {
-    "dotenv": "^17.2.3"
+    "dotenv": "^17.4.2",
+    "xlsx": "^0.18.5"
   }
 }

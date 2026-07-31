@@ -1,48 +1,43 @@
 {
-  "runId": "20260731101051",
+  "runId": "20260731094009",
   "engine": "GyanSetu DPE Phase 1 v5.2 No-Driver / No-Staff-Category Mode",
-  "startedAt": "2026-07-31T10:10:52.018Z",
-  "status": "READY",
+  "startedAt": "2026-07-31T09:40:09.112Z",
+  "status": "READY_WITH_REVIEW",
   "sources": [
     {
-      "file": "workFlowData.xlsx",
-      "sheet": "Student",
+      "file": "classes_export_2026-07-31.csv",
+      "sheet": "Sheet1",
+      "module": null,
+      "rows": 16
+    },
+    {
+      "file": "students_full_export_2026-07-30.csv",
+      "sheet": "Sheet1",
       "module": "students",
       "rows": 50
     },
     {
-      "file": "workFlowData.xlsx",
-      "sheet": "Classes",
-      "module": "classes",
-      "rows": 16
-    },
-    {
-      "file": "workFlowData.xlsx",
-      "sheet": "Faculty",
-      "module": "faculty",
-      "rows": 53
+      "file": "teachers_export.csv",
+      "sheet": "Sheet1",
+      "module": null,
+      "rows": 14
     }
   ],
-  "unclassified": [],
+  "unclassified": [
+    "classes_export_2026-07-31.csv :: Sheet1",
+    "teachers_export.csv :: Sheet1"
+  ],
   "modules": [
     {
       "id": "classes",
       "name": "Classes and Sections",
-      "status": "READY",
-      "raw": 16,
-      "ready": 16,
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
       "rejected": 0,
       "duplicates": 0,
       "warnings": 0,
-      "mapping": [
-        {
-          "source": "workFlowData.xlsx :: Classes",
-          "fields": {
-            "description": "Description",
-            "sections": "Sections"
-          }
-        }
-      ]
+      "mapping": []
     },
     {
       "id": "vehicles",
@@ -80,28 +75,13 @@
     {
       "id": "faculty",
       "name": "Faculty",
-      "status": "READY",
-      "raw": 53,
-      "ready": 53,
+      "status": "NO_DATA",
+      "raw": 0,
+      "ready": 0,
       "rejected": 0,
       "duplicates": 0,
       "warnings": 0,
-      "mapping": [
-        {
-          "source": "workFlowData.xlsx :: Faculty",
-          "fields": {
-            "name": "name",
-            "email": "email",
-            "phone": "phone",
-            "workforceType": "workforceType",
-            "staffCategory": "staffCategory",
-            "staffSubcategory": "staffSubcategory",
-            "qualification": "qualification",
-            "experience": "experience",
-            "subjects": "subjects"
-          }
-        }
-      ]
+      "mapping": []
     },
     {
       "id": "students",
@@ -114,32 +94,59 @@
       "warnings": 0,
       "mapping": [
         {
-          "source": "workFlowData.xlsx :: Student",
+          "source": "students_full_export_2026-07-30.csv :: Sheet1",
           "fields": {
             "Full Name": "Full Name",
+            "Admission Number": "Admission Number",
             "Email": "Email",
             "Student Register No": "Student Register No",
             "Parivar Pechan Patar": "Parivar Pechan Patar",
-            "APAAR ID": "Apaar ID",
+            "APAAR ID": "APAAR ID",
             "Aadhaar Number": "Aadhaar Number",
+            "Admit Date": "Admit Date",
             "Age": "Age",
             "Date of Birth": "Date of Birth",
             "Category": "Category",
             "Branch Name": "Branch Name",
             "PEN No": "PEN No",
+            "Student ID": "Student ID",
+            "Height": "Height",
+            "Weight": "Weight",
             "Religion": "Religion",
             "Caste": "Caste",
             "Nationality": "Nationality",
             "Gender": "Gender",
             "Blood Group": "Blood Group",
+            "ishostelopted": "ishostelopted",
+            "Transport Route": "Transport Route",
+            "Admit Group": "Admit Group",
+            "Admit Stream": "Admit Stream",
+            "Admit Class": "Admit Class",
+            "Admit Section": "Admit Section",
+            "Admit Roll No": "Admit Roll No",
+            "Admit Semester": "Admit Semester",
+            "Admit House": "Admit House",
+            "Current Group": "Current Group",
+            "Current Stream": "Current Stream",
+            "Current Class": "Current Class",
+            "Current Section": "Current Section",
+            "Current Roll No": "Current Roll No",
+            "Current Semester": "Current Semester",
+            "Current House": "Current House",
             "Academic Registration No": "Academic Registration No",
+            "Previous School": "Previous School",
+            "TC Date": "TC Date",
+            "Previous Class": "Previous Class",
+            "Extra Activities": "Extra Activities",
             "Father Name": "Father Name",
             "Father Email": "Father Email",
+            "Father Contact": "Father Contact",
             "Father Qualification": "Father Qualification",
             "Father Occupation": "Father Occupation",
             "Father Aadhaar": "Father Aadhaar",
             "Father Annual Income": "Father Annual Income",
             "Mother Name": "Mother Name",
+            "Mother Contact": "Mother Contact",
             "Mother Qualification": "Mother Qualification",
             "Mother Occupation": "Mother Occupation",
             "Mother Aadhaar": "Mother Aadhaar",
@@ -148,6 +155,7 @@
             "Guardian Address": "Guardian Address",
             "Guardian Contact": "Guardian Contact",
             "Guardian Email": "Guardian Email",
+            "Guardian Aadhaar": "Guardian Aadhaar",
             "Guardian Occupation": "Guardian Occupation",
             "Guardian Annual Income": "Guardian Annual Income",
             "Mobile Number": "Mobile Number",
@@ -156,21 +164,19 @@
             "Street": "Street",
             "City": "City",
             "State": "State",
-            "Pin Code": "PIN Code",
+            "Pin Code": "Pin Code",
+            "Permanent House No": "Permanent House No",
+            "Permanent Street": "Permanent Street",
             "Permanent City": "Permanent City",
             "Permanent State": "Permanent State",
-            "Permanent Pin Code": "Permanent PIN Code",
-            "Transport Mode": "Transport Mode",
+            "Permanent Pin Code": "Permanent Pin Code",
             "Belongs to BPL": "Belongs to BPL",
-            "Minority": "Minority",
             "Disability": "Disability",
-            "Type of Disability": "Type of Disability",
-            "Bank Account No": "Bank Account No",
             "Bank Name": "Bank Name",
             "IFSC Code": "IFSC Code",
             "Medium of Instruction": "Medium of Instruction",
             "Last Year Result": "Last Year Result",
-            "Single Parent": "Single Parent?",
+            "Single Parent": "Single Parent",
             "Only Child": "Only Child",
             "Only Girl Child": "Only Girl Child",
             "Transfer Case": "Transfer Case",
@@ -184,10 +190,10 @@
     }
   ],
   "totals": {
-    "raw": 119,
-    "ready": 119,
+    "raw": 50,
+    "ready": 50,
     "rejected": 0,
     "duplicates": 0
   },
-  "finishedAt": "2026-07-31T10:10:52.111Z"
+  "finishedAt": "2026-07-31T09:40:09.193Z"
 }

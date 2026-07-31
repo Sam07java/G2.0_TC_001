@@ -30,6 +30,30 @@ export default class LoginPage
         this.studentlogintext = 'Student Portal';
 
         this.errormessageElement = '.error-message'
+
+
+        // aryan login code
+        this.instituteLoginButton = page.getByRole('button', { name: 'Institute Login', exact: true });
+        this.emailInput = page.locator('#institute-login-email, input[type="email"]').first();
+        this.passwordInput = page.locator('#institute-login-password, input[type="password"]').first();
+        this.signInButton = page.locator('button[type="submit"]').first();
+        this.dashboardHeading = page.getByText('School Admin', { exact: true });
+    }
+
+    async open() {
+        await this.page.goto(process.env.URL, { waitUntil: 'domcontentloaded' });
+    }
+
+    async login(email, password) {
+        if (await this.instituteLoginButton.isVisible().catch(() => false)) {
+            await this.instituteLoginButton.click();
+        }
+
+        await this.emailInput.fill(email);
+        await this.page.keyboard.press('Tab')
+        await this.passwordInput.fill(password);
+        await this.signInButton.click();
+        await this.dashboardHeading.waitFor({ state: 'visible' });
     }
 
     async click_on_institute_Button(){

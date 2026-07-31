@@ -1,0 +1,8 @@
+{
+  "runId": "100913",
+  "startedAt": "2026-07-31T10:09:13.068Z",
+  "status": "FAILED",
+  "stages": [],
+  "fatalError": "page.waitForURL: Target page, context or browser has been closed\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at login (F:\\my aryan repo\\G2.0_TC_001\\src\\importer.js:106:16)\n    at async F:\\my aryan repo\\G2.0_TC_001\\src\\importer.js:447:5",
+  "finishedAt": "2026-07-31T10:09:34.465Z"
+}
