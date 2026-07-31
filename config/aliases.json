@@ -1,0 +1,24 @@
+{
+  "global": {
+    "full name": ["student name", "name of student", "learner name", "pupil name"],
+    "admission number": ["admission no", "admission no.", "adm no", "admission id", "enrollment number"],
+    "date of birth": ["dob", "birth date", "birthdate"],
+    "mobile number": ["mobile", "phone", "phone number", "contact", "contact number", "student mobile"],
+    "father name": ["father", "fathers name", "father's name"],
+    "mother name": ["mother", "mothers name", "mother's name"],
+    "current class": ["class", "present class", "current grade"],
+    "admit class": ["admitted class", "admission class", "entry class"],
+    "current section": ["section", "present section"],
+    "admit section": ["admission section", "entry section"],
+    "license number": ["licence number", "license no", "licence no", "dl number", "driving license"],
+    "registrationnumber": ["registration number", "vehicle registration", "registration no", "reg no"],
+    "feetype name": ["fee name", "fee type", "charge name"],
+    "default amount": ["amount", "fee amount", "default fee"],
+    "startlocation": ["from", "start", "pickup location", "origin"],
+    "endlocation": ["to", "end", "destination"],
+    "estimatedtime": ["time", "duration", "estimated time minutes"],
+    "monthlyfeeamount": ["monthly fee", "route fee", "transport fee"],
+    "employeeCode": ["employee code", "staff code", "emp code"],
+    "joiningDate": ["joining date", "date of joining", "doj"]
+  }
+}

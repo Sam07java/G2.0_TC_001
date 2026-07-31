@@ -1,0 +1,143 @@
+{
+  "classes": {
+    "required": [
+      "name",
+      "sections"
+    ],
+    "unique": [
+      "name"
+    ],
+    "defaults": {
+      "description": ""
+    }
+  },
+  "vehicles": {
+    "required": [
+      "registrationNumber",
+      "make",
+      "model",
+      "capacity",
+      "fuelType",
+      "status"
+    ],
+    "unique": [
+      "registrationNumber"
+    ],
+    "defaults": {
+      "color": "",
+      "notes": ""
+    }
+  },
+  "routes": {
+    "required": [
+      "name",
+      "startLocation",
+      "endLocation",
+      "distance",
+      "monthlyFeeAmount",
+      "isActive"
+    ],
+    "unique": [
+      "name"
+    ],
+    "defaults": {
+      "description": "",
+      "estimatedTime": ""
+    }
+  },
+  "fees": {
+    "required": [
+      "Fee Type Name",
+      "Category",
+      "Default amount (\u20b9)",
+      "Monthly fee (yes/no)",
+      "Active (yes/no)"
+    ],
+    "unique": [
+      "Fee Type Name"
+    ],
+    "defaults": {
+      "Description": "",
+      "Applicable session months": ""
+    }
+  },
+  "faculty": {
+    "required": [
+      "name",
+      "email",
+      "username",
+      "phone",
+      "gender",
+      "workforceType",
+      "designation",
+      "qualification",
+      "joiningDate",
+      "status",
+      "employeeCode"
+    ],
+    "unique": [
+      "email",
+      "employeeCode"
+    ],
+    "defaults": {
+      "alternateEmail": "",
+      "emergencyContact": "",
+      "dateOfBirth": "",
+      "age": "",
+      "bloodGroup": "",
+      "staffSubcategory": "",
+      "religion": "",
+      "staffSubSubcategory": "",
+      "maritalStatus": "",
+      "address": "",
+      "experience": "",
+      "monthlySalary": "",
+      "isClassIncharge": "no",
+      "inchargeClass": "",
+      "inchargeSection": "",
+      "departmentId": "",
+      "classes": "",
+      "subjects": "",
+      "teacherId": "",
+      "facebook": "",
+      "twitter": "",
+      "linkedIn": "",
+      "accountHolderName": "",
+      "accountNumber": "",
+      "bankName": "",
+      "bankBranch": ""
+    }
+  },
+  "students": {
+    "required": [
+      "Full Name",
+      "Admission Number",
+      "Date of Birth",
+      "Gender",
+      "Admit Class",
+      "Admit Section",
+      "Current Class",
+      "Current Section",
+      "Father Name",
+      "Mother Name",
+      "Mobile Number"
+    ],
+    "unique": [
+      "Admission Number"
+    ],
+    "defaults": {
+      "Category": "General",
+      "Nationality": "Indian",
+      "ishostelopted": "no",
+      "Transport Mode": "Self",
+      "Belongs to BPL": "no",
+      "Minority": "no",
+      "Disability": "no",
+      "Single Parent": "no",
+      "Only Child": "no",
+      "Only Girl Child": "no",
+      "Transfer Case": "no",
+      "Admission Type": "Regular"
+    }
+  }
+}

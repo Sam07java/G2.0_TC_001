@@ -1,0 +1,106 @@
+{
+  "modules": [
+    {
+      "id": "session",
+      "name": "Academic Session",
+      "order": 1,
+      "url": "/school/administration/academic-session",
+      "mode": "untouched"
+    },
+    {
+      "id": "classes",
+      "name": "Classes and Sections",
+      "order": 2,
+      "url": "/school/class-management",
+      "file": "Classes.csv",
+      "import_labels": [
+        "Import"
+      ],
+      "verify_columns": [
+        "name"
+      ]
+    },
+    {
+      "id": "subjects",
+      "name": "Subject Assignment",
+      "order": 3,
+      "url": "/school/students/subject-assignment",
+      "mode": "verify-only"
+    },
+    {
+      "id": "vehicles",
+      "name": "Vehicles",
+      "order": 4,
+      "url": "/school/transport-management/vehicle-management",
+      "file": "Vehicles.csv",
+      "import_labels": [
+        "Import"
+      ],
+      "verify_columns": [
+        "registrationNumber"
+      ]
+    },
+    {
+      "id": "routes",
+      "name": "Transport Routes",
+      "order": 5,
+      "url": "/school/transport-management/transport-routes",
+      "file": "Routes.csv",
+      "import_titles": [
+        "Import Transport Routes from CSV"
+      ],
+      "import_labels": [
+        "Import"
+      ],
+      "verify_columns": [
+        "name"
+      ]
+    },
+    {
+      "id": "fees",
+      "name": "Fee Types",
+      "order": 6,
+      "url": "/fees-management",
+      "file": "Fee Types.csv",
+      "import_labels": [
+        "Import"
+      ],
+      "verify_columns": [
+        "Fee Type Name"
+      ]
+    },
+    {
+      "id": "faculty",
+      "name": "Faculty",
+      "order": 7,
+      "url": "/school/faculty-management/teacher-directory",
+      "file": "Faculty.csv",
+      "import_labels": [
+        "Import"
+      ],
+      "verify_columns": [
+        "name",
+        "email"
+      ],
+      "wizard": true
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "order": 8,
+      "url": "/school/students/manage-students",
+      "file": "Students.csv",
+      "import_titles": [
+        "Import from CSV"
+      ],
+      "import_labels": [
+        "Import CSV",
+        "Import"
+      ],
+      "verify_columns": [
+        "Full Name"
+      ],
+      "accept_submission_confirmation": true
+    }
+  ]
+}

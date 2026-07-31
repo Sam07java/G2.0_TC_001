@@ -1,0 +1,26 @@
+{
+  "runId": "20260730152447",
+  "generatedAt": "2026-07-30T15:24:48.275Z",
+  "dpeStatus": "READY",
+  "dpeTotals": {
+    "raw": 50,
+    "ready": 50,
+    "rejected": 0,
+    "duplicates": 0
+  },
+  "files": [
+    {
+      "module": "students",
+      "file": "Students.csv",
+      "rows": 50,
+      "runtimePath": "runtime\\imports\\Students.csv"
+    }
+  ],
+  "noDataModules": [
+    "classes",
+    "vehicles",
+    "routes",
+    "fees",
+    "faculty"
+  ]
+}

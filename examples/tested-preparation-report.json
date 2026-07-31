@@ -1,0 +1,1005 @@
+{
+  "runId": "20260717093951",
+  "startedAt": "2026-07-17T09:39:51.172Z",
+  "engine": "GyanSetu ADSE Intelligent Data Preparation Engine v4",
+  "rawSources": [
+    {
+      "file": "input/raw/sample-import-ready-workbook.xlsx",
+      "datasets": [
+        "Drivers",
+        "Routes",
+        "Classes",
+        "Fee Types",
+        "Students"
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "classes",
+      "name": "Classes and Sections",
+      "status": "READY",
+      "sources": [
+        "sample-import-ready-workbook.xlsx :: Classes"
+      ],
+      "rawRows": 100,
+      "acceptedRows": 100,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 0,
+      "mappings": [
+        {
+          "source": "sample-import-ready-workbook.xlsx :: Classes",
+          "fields": [
+            {
+              "target": "name",
+              "source": "name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "description",
+              "source": "description",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "sections",
+              "source": "sections",
+              "confidence": 1,
+              "method": "exact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicles",
+      "name": "Vehicles",
+      "status": "NO_DATA",
+      "sources": [],
+      "rawRows": 0,
+      "acceptedRows": 0,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 0,
+      "mappings": []
+    },
+    {
+      "id": "drivers",
+      "name": "Drivers",
+      "status": "READY",
+      "sources": [
+        "sample-import-ready-workbook.xlsx :: Drivers"
+      ],
+      "rawRows": 100,
+      "acceptedRows": 100,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 300,
+      "mappings": [
+        {
+          "source": "sample-import-ready-workbook.xlsx :: Drivers",
+          "fields": [
+            {
+              "target": "Name",
+              "source": "Name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "License Number",
+              "source": "License Number",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Contact",
+              "source": "Contact",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Address",
+              "source": "Address",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Experience (Years)",
+              "source": "Experience (Years)",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Age",
+              "source": "Age",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Gender",
+              "source": "Gender",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Marital Status",
+              "source": "Marital Status",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Emergency Contact",
+              "source": "Emergency Contact",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Blood Group",
+              "source": "Blood Group",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Qualification",
+              "source": "Qualification",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Monthly Salary",
+              "source": "Monthly Salary",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Date of Birth",
+              "source": "Date of Birth",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Joining Date",
+              "source": "Joining Date",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Status",
+              "source": "Status",
+              "confidence": 1,
+              "method": "exact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "routes",
+      "name": "Transport Routes",
+      "status": "READY",
+      "sources": [
+        "sample-import-ready-workbook.xlsx :: Routes"
+      ],
+      "rawRows": 100,
+      "acceptedRows": 100,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 100,
+      "mappings": [
+        {
+          "source": "sample-import-ready-workbook.xlsx :: Routes",
+          "fields": [
+            {
+              "target": "name",
+              "source": "name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "description",
+              "source": "description",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "startLocation",
+              "source": "startLocation",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "endLocation",
+              "source": "endLocation",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "distance",
+              "source": "distance",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "estimatedTime",
+              "source": "estimatedTime",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "monthlyFeeAmount",
+              "source": "monthlyFeeAmount",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "isActive",
+              "source": "isActive",
+              "confidence": 1,
+              "method": "exact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "name": "Fee Types",
+      "status": "READY",
+      "sources": [
+        "sample-import-ready-workbook.xlsx :: Fee Types"
+      ],
+      "rawRows": 100,
+      "acceptedRows": 100,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 100,
+      "mappings": [
+        {
+          "source": "sample-import-ready-workbook.xlsx :: Fee Types",
+          "fields": [
+            {
+              "target": "Fee Type Name",
+              "source": "Fee Type Name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Description",
+              "source": "Description",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Category",
+              "source": "Category",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Default amount (₹)",
+              "source": "Default amount (₹)",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Monthly fee (yes/no)",
+              "source": "Monthly fee (yes/no)",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Applicable session months",
+              "source": "Applicable session months",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Active (yes/no)",
+              "source": "Active (yes/no)",
+              "confidence": 1,
+              "method": "exact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faculty",
+      "name": "Faculty",
+      "status": "NO_DATA",
+      "sources": [],
+      "rawRows": 0,
+      "acceptedRows": 0,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 0,
+      "mappings": []
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "status": "READY",
+      "sources": [
+        "sample-import-ready-workbook.xlsx :: Students"
+      ],
+      "rawRows": 100,
+      "acceptedRows": 100,
+      "rejectedRows": 0,
+      "duplicatesRemoved": 0,
+      "correctedValues": 100,
+      "mappings": [
+        {
+          "source": "sample-import-ready-workbook.xlsx :: Students",
+          "fields": [
+            {
+              "target": "Full Name",
+              "source": "Full Name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Admission Number",
+              "source": "Admission Number",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Email",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Student Register No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Parivar Pechan Patar",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "APAAR ID",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Aadhaar Number",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit Date",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Age",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Date of Birth",
+              "source": "Date of Birth",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Category",
+              "source": "Category",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Branch Name",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "PEN No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Student ID",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Height",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Weight",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Religion",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Caste",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Nationality",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Gender",
+              "source": "Gender",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Blood Group",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "ishostelopted",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Transport Route",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit Group",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit Stream",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit Class",
+              "source": "Admit Class",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Admit Section",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit Roll No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit Semester",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admit House",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Current Group",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Current Stream",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Current Class",
+              "source": "Current Class",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Current Section",
+              "source": "Section",
+              "confidence": 0.96,
+              "method": "alias"
+            },
+            {
+              "target": "Current Roll No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Current Semester",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Current House",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Academic Registration No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Previous School",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "School Address",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "TC Date",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Previous Class",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Percentage",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Extra Activities",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Father Name",
+              "source": "Father Name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Father Email",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Father Contact",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Father Qualification",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Father Occupation",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Father Aadhaar",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Father Annual Income",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mother Name",
+              "source": "Mother Name",
+              "confidence": 1,
+              "method": "exact"
+            },
+            {
+              "target": "Mother Contact",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mother Qualification",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mother Occupation",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mother Aadhaar",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mother Annual Income",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Name",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Address",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Contact",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Email",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Aadhaar",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Occupation",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Guardian Annual Income",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mobile Number",
+              "source": "Contact Number",
+              "confidence": 0.96,
+              "method": "alias"
+            },
+            {
+              "target": "Emergency Contact",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "House No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Street",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "City",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "State",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Pin Code",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Permanent House No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Permanent Street",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Permanent City",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Permanent State",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Permanent Pin Code",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Transport Mode",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_busId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Pickup Point",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_pickupDriverId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_pickupRouteId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_pickupBusId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_pickupLocation",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_pickupArea",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_dropDriverId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_dropRouteId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_dropBusId",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_dropLocation",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "transport_dropArea",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Belongs to BPL",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Minority",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Disability",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Type of Disability",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Bank Account No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Bank Name",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "IFSC Code",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Medium of Instruction",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Last Year Result",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Single Parent",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Only Child",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Only Girl Child",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Transfer Case",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Living With",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Mother Tongue",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "Admission Type",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "UDISE No",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "fatherSignature",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "motherSignature",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            },
+            {
+              "target": "guardianSignature",
+              "source": "",
+              "confidence": 0,
+              "method": "derived-or-empty"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "rawRows": 500,
+    "acceptedRows": 500,
+    "rejectedRows": 0,
+    "duplicatesRemoved": 0,
+    "correctedValues": 600
+  },
+  "dependencyIssues": [],
+  "finishedAt": "2026-07-17T09:39:51.969Z",
+  "status": "READY"
+}

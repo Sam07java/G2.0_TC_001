@@ -1,0 +1,184 @@
+{
+  "modules": [
+    {
+      "id": "classes",
+      "name": "Classes and Sections",
+      "template": "classes.csv",
+      "output": "Classes.csv",
+      "sheetAliases": [
+        "class",
+        "classes",
+        "class management",
+        "sections"
+      ],
+      "required": [
+        "name",
+        "sections"
+      ],
+      "unique": [
+        "name"
+      ],
+      "url": "/school/class-management",
+      "importLabels": [
+        "Import"
+      ]
+    },
+    {
+      "id": "vehicles",
+      "name": "Vehicles",
+      "template": "vehicles.csv",
+      "output": "Vehicles.csv",
+      "sheetAliases": [
+        "vehicle",
+        "vehicles",
+        "fleet",
+        "buses"
+      ],
+      "required": [
+        "registrationNumber",
+        "make",
+        "model",
+        "year",
+        "capacity",
+        "fuelType",
+        "status"
+      ],
+      "unique": [
+        "registrationNumber"
+      ],
+      "url": "/school/transport-management/vehicle-management",
+      "importLabels": [
+        "Import"
+      ]
+    },
+    {
+      "id": "routes",
+      "name": "Transport Routes",
+      "template": "routes.csv",
+      "output": "Routes.csv",
+      "sheetAliases": [
+        "route",
+        "routes",
+        "transport routes"
+      ],
+      "required": [
+        "name",
+        "startLocation",
+        "endLocation",
+        "distance",
+        "estimatedTime",
+        "monthlyFeeAmount",
+        "isActive"
+      ],
+      "unique": [
+        "name"
+      ],
+      "url": "/school/transport-management/transport-routes",
+      "importLabels": [
+        "Import"
+      ]
+    },
+    {
+      "id": "fees",
+      "name": "Fee Types",
+      "template": "fees.csv",
+      "output": "Fee Types.csv",
+      "sheetAliases": [
+        "fee",
+        "fees",
+        "fee types",
+        "fee structure"
+      ],
+      "required": [
+        "Fee Type Name",
+        "Category",
+        "Default amount (\u20b9)",
+        "Monthly fee (yes/no)",
+        "Active (yes/no)"
+      ],
+      "unique": [
+        "Fee Type Name"
+      ],
+      "url": "/fees-management",
+      "importLabels": [
+        "Import"
+      ]
+    },
+    {
+      "id": "faculty",
+      "name": "Faculty",
+      "template": "faculty.csv",
+      "output": "Faculty.csv",
+      "sheetAliases": [
+        "teacher",
+        "teachers",
+        "faculty",
+        "staff",
+        "staff directory"
+      ],
+      "required": [
+        "name",
+        "email",
+        "username",
+        "phone",
+        "gender",
+        "dateOfBirth",
+        "workforceType",
+        "designation",
+        "qualification",
+        "experience",
+        "joiningDate",
+        "monthlySalary",
+        "status",
+        "employeeCode"
+      ],
+      "unique": [
+        "email",
+        "username",
+        "phone",
+        "employeeCode"
+      ],
+      "url": "/school/faculty-management/teacher-directory",
+      "importLabels": [
+        "Import"
+      ],
+      "wizard": true
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "template": "students.csv",
+      "output": "Students.csv",
+      "sheetAliases": [
+        "student",
+        "students",
+        "learner",
+        "pupil",
+        "admissions"
+      ],
+      "required": [
+        "Full Name",
+        "Admission Number",
+        "Date of Birth",
+        "Category",
+        "Gender",
+        "Admit Class",
+        "Admit Section",
+        "Current Class",
+        "Current Section",
+        "Father Name",
+        "Mother Name",
+        "Mobile Number"
+      ],
+      "unique": [
+        "Admission Number"
+      ],
+      "url": "/school/students/manage-students",
+      "importLabels": [
+        "Import CSV",
+        "Import"
+      ],
+      "acceptSubmissionConfirmation": true
+    }
+  ]
+}

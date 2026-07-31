@@ -1,0 +1,7 @@
+Integrated DPE + ADSE validation test
+Raw rows: 1242
+Ready rows: 1242
+Rejected rows: 0
+Staged ADSE modules: 7
+Portal write: NOT PERFORMED (validation-only test)
+Command tested: npm run validate

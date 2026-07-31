@@ -1,0 +1,205 @@
+{
+  "runId": "20260718052908",
+  "engine": "GyanSetu DPE Phase 1 v4.3 Zero-Rejection Mode",
+  "startedAt": "2026-07-18T05:29:08.610Z",
+  "status": "READY",
+  "sources": [
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Classes_Raw",
+      "module": "classes",
+      "rows": 15
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Sections_Raw",
+      "module": "sections",
+      "rows": 45
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Students_Raw",
+      "module": "students",
+      "rows": 1000
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Faculty_Raw",
+      "module": "faculty",
+      "rows": 120
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Drivers_Raw",
+      "module": "drivers",
+      "rows": 30
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Vehicles_Raw",
+      "module": "vehicles",
+      "rows": 25
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Routes_Raw",
+      "module": "routes",
+      "rows": 40
+    },
+    {
+      "file": "Integration_Test_Raw_Data.xlsx",
+      "sheet": "Fee_Types_Raw",
+      "module": "fees",
+      "rows": 12
+    }
+  ],
+  "unclassified": [],
+  "modules": [
+    {
+      "id": "classes",
+      "name": "Classes and Sections",
+      "status": "READY",
+      "raw": 15,
+      "ready": 15,
+      "rejected": 0,
+      "duplicates": 3,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Classes_Raw",
+          "fields": {}
+        }
+      ]
+    },
+    {
+      "id": "vehicles",
+      "name": "Vehicles",
+      "status": "READY",
+      "raw": 25,
+      "ready": 25,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Vehicles_Raw",
+          "fields": {
+            "capacity": "capacity",
+            "status": "status"
+          }
+        }
+      ]
+    },
+    {
+      "id": "drivers",
+      "name": "Drivers",
+      "status": "READY",
+      "raw": 30,
+      "ready": 30,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Drivers_Raw",
+          "fields": {
+            "Address": "address",
+            "Joining Date": "joining_date",
+            "Status": "status"
+          }
+        }
+      ]
+    },
+    {
+      "id": "routes",
+      "name": "Transport Routes",
+      "status": "READY",
+      "raw": 40,
+      "ready": 40,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Routes_Raw",
+          "fields": {}
+        }
+      ]
+    },
+    {
+      "id": "fees",
+      "name": "Fee Types",
+      "status": "READY",
+      "raw": 12,
+      "ready": 12,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Fee_Types_Raw",
+          "fields": {}
+        }
+      ]
+    },
+    {
+      "id": "faculty",
+      "name": "Faculty",
+      "status": "READY",
+      "raw": 120,
+      "ready": 120,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Faculty_Raw",
+          "fields": {
+            "email": "Email",
+            "phone": "Phone",
+            "gender": "Gender",
+            "address": "Address",
+            "designation": "Designation",
+            "qualification": "Qualification",
+            "status": "Status",
+            "subjects": "Subjects"
+          }
+        }
+      ]
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "status": "READY",
+      "raw": 1000,
+      "ready": 1000,
+      "rejected": 0,
+      "duplicates": 0,
+      "warnings": 0,
+      "mapping": [
+        {
+          "source": "Integration_Test_Raw_Data.xlsx :: Students_Raw",
+          "fields": {
+            "Email": "Email",
+            "Gender": "Gender",
+            "Blood Group": "Blood Group",
+            "Transport Route": "Transport Route",
+            "Admit Class": "Admit Class",
+            "Current Class": "Current Class",
+            "Previous School": "Previous School",
+            "Father Name": "Father Name",
+            "Mother Name": "Mother Name",
+            "City": "City"
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "raw": 1242,
+    "ready": 1242,
+    "rejected": 0,
+    "duplicates": 3
+  },
+  "finishedAt": "2026-07-18T05:29:09.066Z"
+}

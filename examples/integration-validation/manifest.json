@@ -1,0 +1,56 @@
+{
+  "runId": "20260718052908",
+  "generatedAt": "2026-07-18T05:29:09.275Z",
+  "dpeStatus": "READY",
+  "dpeTotals": {
+    "raw": 1242,
+    "ready": 1242,
+    "rejected": 0,
+    "duplicates": 3
+  },
+  "files": [
+    {
+      "module": "classes",
+      "file": "Classes.csv",
+      "rows": 15,
+      "runtimePath": "runtime/imports/Classes.csv"
+    },
+    {
+      "module": "vehicles",
+      "file": "Vehicles.csv",
+      "rows": 25,
+      "runtimePath": "runtime/imports/Vehicles.csv"
+    },
+    {
+      "module": "drivers",
+      "file": "Drivers.csv",
+      "rows": 30,
+      "runtimePath": "runtime/imports/Drivers.csv"
+    },
+    {
+      "module": "routes",
+      "file": "Routes.csv",
+      "rows": 40,
+      "runtimePath": "runtime/imports/Routes.csv"
+    },
+    {
+      "module": "fees",
+      "file": "Fee Types.csv",
+      "rows": 12,
+      "runtimePath": "runtime/imports/Fee Types.csv"
+    },
+    {
+      "module": "faculty",
+      "file": "Faculty.csv",
+      "rows": 120,
+      "runtimePath": "runtime/imports/Faculty.csv"
+    },
+    {
+      "module": "students",
+      "file": "Students.csv",
+      "rows": 1000,
+      "runtimePath": "runtime/imports/Students.csv"
+    }
+  ],
+  "noDataModules": []
+}

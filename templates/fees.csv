@@ -1,0 +1,3 @@
+﻿Fee Type Name,Description,Category,Default amount (₹),Monthly fee (yes/no),Applicable session months,Active (yes/no)
+Example Tuition Fee,Term 1 tuition,tuition,5000,yes,all,yes
+Example Admission Fee,One-time charge,misc,2500,no,,yes
