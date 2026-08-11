@@ -1,0 +1,139 @@
+{
+  "runId": "125654",
+  "startedAt": "2026-08-06T12:56:54.004Z",
+  "status": "PARTIAL",
+  "stages": [
+    {
+      "order": 1,
+      "name": "Academic Session",
+      "status": "UNTOUCHED",
+      "screenshots": [
+        "screenshots/1786021030491-1-session-before.png"
+      ],
+      "attempts": [],
+      "note": "Academic session intentionally untouched",
+      "finishedAt": "2026-08-06T12:57:10.805Z"
+    },
+    {
+      "order": 2,
+      "name": "Classes and Sections",
+      "status": "SUCCESS",
+      "screenshots": [
+        "screenshots/1786021033334-2-classes-before.png",
+        "screenshots/1786021040411-2-classes-after.png"
+      ],
+      "attempts": [],
+      "verification": {
+        "verified": true,
+        "method": "page text",
+        "value": "Class 1"
+      },
+      "file": "runtime\\imports\\Classes.csv",
+      "finishedAt": "2026-08-06T12:57:20.613Z"
+    },
+    {
+      "order": 3,
+      "name": "Subject Assignment",
+      "status": "VERIFIED_PAGE",
+      "screenshots": [
+        "screenshots/1786021043146-3-subjects-before.png"
+      ],
+      "attempts": [],
+      "verification": {
+        "verified": true,
+        "method": "page loaded"
+      },
+      "finishedAt": "2026-08-06T12:57:23.526Z"
+    },
+    {
+      "order": 4,
+      "name": "Vehicles",
+      "status": "NO_DATA",
+      "screenshots": [
+        "screenshots/1786021046355-4-vehicles-before.png"
+      ],
+      "attempts": [],
+      "note": "No classified import-ready data was generated for Vehicles",
+      "verification": {
+        "verified": true,
+        "method": "no source data"
+      },
+      "finishedAt": "2026-08-06T12:57:26.556Z"
+    },
+    {
+      "order": 5,
+      "name": "Transport Routes",
+      "status": "NO_DATA",
+      "screenshots": [
+        "screenshots/1786021049125-5-routes-before.png"
+      ],
+      "attempts": [],
+      "note": "No classified import-ready data was generated for Transport Routes",
+      "verification": {
+        "verified": true,
+        "method": "no source data"
+      },
+      "finishedAt": "2026-08-06T12:57:29.311Z"
+    },
+    {
+      "order": 6,
+      "name": "Fee Types",
+      "status": "NO_DATA",
+      "screenshots": [
+        "screenshots/1786021051820-6-fees-before.png"
+      ],
+      "attempts": [],
+      "note": "No classified import-ready data was generated for Fee Types",
+      "verification": {
+        "verified": true,
+        "method": "no source data"
+      },
+      "finishedAt": "2026-08-06T12:57:31.966Z"
+    },
+    {
+      "order": 7,
+      "name": "Faculty",
+      "status": "FAILED",
+      "screenshots": [
+        "screenshots/1786021054471-7-faculty-before.png",
+        "screenshots/1786021064100-7-faculty-after.png",
+        "screenshots/1786021073691-7-faculty-after.png"
+      ],
+      "attempts": [
+        {
+          "attempt": 1,
+          "error": "Verification failed"
+        },
+        {
+          "attempt": 2,
+          "error": "Verification failed"
+        }
+      ],
+      "verification": {
+        "verified": false,
+        "method": "not found",
+        "value": "Rahul Sharma"
+      },
+      "error": "Verification failed",
+      "finishedAt": "2026-08-06T12:57:53.965Z"
+    },
+    {
+      "order": 8,
+      "name": "Students",
+      "status": "SUCCESS",
+      "screenshots": [
+        "screenshots/1786021076563-8-students-before.png",
+        "screenshots/1786021083613-8-students-after.png"
+      ],
+      "attempts": [],
+      "verification": {
+        "verified": true,
+        "method": "search",
+        "value": "Student 01"
+      },
+      "file": "runtime\\imports\\Students.csv",
+      "finishedAt": "2026-08-06T12:58:03.856Z"
+    }
+  ],
+  "finishedAt": "2026-08-06T12:58:03.856Z"
+}

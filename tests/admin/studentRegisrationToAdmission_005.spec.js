@@ -2,18 +2,21 @@ import {test, expect} from '@playwright/test'
 import { landingPage } from '../../pages/landingPage.js'
 require('dotenv').config();
 import studentcreationData from '../../testData/studentRegistrationData.json'
-import { loginPage } from '../../pages/loginPage.js';
+import  LoginPage  from '../../pages/loginPage.js';
 import { institutedashboardpage } from '../../pages/instituteDashboardPage.js'; 
-const { studeregistrationPage } = require('../../pages/studentRegistration.js');
+const  {studeregistrationPage}  = require('../../pages/studentRegistration.js');
+import { RegisteredStudentListPage } from '../../pages/registreredStudentListPage.js';
 
 test.beforeEach('Institute login', async ({page})=>{
 
-   const institutepage = new landingPage(page)
-   const loginpage = new loginPage(page)
+const institutepage = new landingPage(page)
+   const loginpage = new LoginPage(page)
    await institutepage.gettheURL()
+   // await institutepage.click_on_start_Buttton()
    await loginpage.click_on_institute_Button()
    await page.waitForTimeout(2000)
    await loginpage.enter_Login_Data(process.env.INSTITUTE_ADMIN_EMAIL, process.env.INSTITUTE_ADMIN_PASSWORD)
+   // await page.pause()
    await loginpage.verify_Login_Success()
 
 })
@@ -26,7 +29,8 @@ test("Verify student registration through the Registration Form and successful a
 
     //Basic Information of student registration form.
    const studentregistration = new studeregistrationPage(page)
-   await studentregistration.enter_the_FullName('ASs')
+   await studentregistration.enter_the_FullName(studentcreationData.RegistrationDataToAdmission.student_full_name)
+                                                      
    await studentregistration.enter_the_RegistrationDate('2026-07-12')
    await studentregistration.select_the_Class('Class 10')
    await studentregistration.click_on_the_FormNumberGeneratedButton()
@@ -58,7 +62,22 @@ test("Verify student registration through the Registration Form and successful a
 
    //Validation of successful submission of student registration form.
    await studentregistration.verify_Student_Creation_Success()
+   await page.waitForTimeout(2000)
+   const registeredStudentListPage = new RegisteredStudentListPage(page)
+
+   
+   // const institutedashboardPage = new institutedashboardpage(page)
+   // await institutedashboardPage.navigateToStudentRegistrationListPage()
   
-    
+   // Search for the registered student in the registered student list page and verify the student is present in the list.
+   const registeredStudentRowData = await registeredStudentListPage.getTheNameOfRegisteredStudentListPage(studentcreationData.RegistrationDataToAdmission.student_full_name)
+   // Validation of the registered student in the registered student list page.
+   await expect(registeredStudentRowData).toContain(studentcreationData.RegistrationDataToAdmission.student_full_name)
+
+   // Click on the "Move to Admission" button for the registered student.
+   await registeredStudentListPage.clickOnMoveToAdmissionButton(studentcreationData.RegistrationDataToAdmission.student_full_name)
+
+
+   await page.pause()
 
 })

@@ -1,5 +1,7 @@
 const { ModuleImportPage } = require('./moduleImportPage');
 
-class StudentPage extends ModuleImportPage {}
+class StudentPage extends ModuleImportPage {
+    
+}
 
 module.exports = { StudentPage };
